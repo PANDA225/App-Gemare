@@ -15,13 +15,11 @@ import ViewReportsPageTech from './Screens/ViewReportsPageTech';
 import ReportDetailsPageTech from './Screens/ReportDetailsPageTech';
 import SettingsPage from './Screens/SettingsPage';
 import UserListPage from './Screens/UserListPage';
+import DasboardPage from './Screens/DashboardPage';
 import MaintenancePage from './Screens/MaintenancePage';
 import NotificationPage from './Screens/NotificationPage';
 import NotificationPageAdmin from './Screens/NotificationPageAdmin';
-import { Updates } from 'expo-updates';
-
 const Stack = createNativeStackNavigator();
-
 function App() {
   return (
     <NavigationContainer>
@@ -40,13 +38,12 @@ function App() {
             <Stack.Screen name="ReportDetailsPageTech" component={ReportDetailsPageTech} options={{ headerShown: false }} />
             <Stack.Screen name="SettingsPage" component={SettingsPage} options={{ headerShown: false }} />
             <Stack.Screen name="UserListPage" component={UserListPage} options={{ headerShown: false }} />
+            <Stack.Screen name="DasboardPage" component={DasboardPage} options={{ headerShown: false }} />
             <Stack.Screen name="MaintenancePage" component={MaintenancePage} options={{ headerShown: false }} />
             <Stack.Screen name="NotificationPage" component={NotificationPage} options={{ headerShown: false }} />
             <Stack.Screen name="NotificationPageAdmin" component={NotificationPageAdmin} options={{ headerShown: false }} />
           
       </Stack.Navigator>
     </NavigationContainer>
-  );
-}
-
+  );}
 export default App;

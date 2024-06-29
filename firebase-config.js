@@ -1,10 +1,9 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getStorage } from 'firebase/storage';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { initializeAuth, getReactNativePersistence } from "firebase/auth";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { getStorage } from "firebase/storage";
 
-// Tus datos de configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyAhen6fR37lqj53RSbtpFS74kWU3_KNcjE",
   authDomain: "gemare-react.firebaseapp.com",
@@ -17,13 +16,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
-// Inicializa Firestore
 const db = getFirestore(app);
-
-// Inicializa Firebase Auth con persistencia basada en AsyncStorage
 const auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(AsyncStorage)
+  persistence: getReactNativePersistence(AsyncStorage),
 });
 const storage = getStorage(app);
 export { db, auth, storage };
